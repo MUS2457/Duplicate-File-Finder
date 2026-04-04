@@ -7,7 +7,7 @@ def get_files(folder_path) :
         current_path = os.path.join(folder_path, files)
 
         if os.path.isfile(current_path):
-            list_of_files.append(current_path)
+            list_of_files.append(current_path)   # return full path of the file
 
     return list_of_files
 

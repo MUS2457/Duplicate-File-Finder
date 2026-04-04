@@ -22,7 +22,7 @@ def search_files(folder_path):
         result = []
 
         for file in files:
-            filename = os.path.basename(file)
+            filename = os.path.basename(file)  # extract file name from the path
 
             if user.lower() in filename.lower():
                 result.append(file)
