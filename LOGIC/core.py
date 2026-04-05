@@ -29,6 +29,27 @@ def group_files_size(folder_path):
 
     return files
 
+def find_possible_duplicates(folder_path):
+
+    sized_files = group_files_size(folder_path)
+    possible_duplicates = {}
+
+    if not sized_files:
+
+        return {}
+
+    for size, paths in sized_files.items():
+
+        if len(paths) > 1:
+            possible_duplicates[size] = paths
+
+    return possible_duplicates
+
+
+
+
+
+
 
 
 
